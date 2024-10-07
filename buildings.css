@@ -1,0 +1,488 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+/*Changed bg*/
+body{
+    background-image: url(/Images/Building\ background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding:0;
+    overflow-y: hidden;
+}
+
+
+button{
+    cursor: pointer;
+}
+
+.divider{
+    padding-bottom: 30px;
+}
+
+nav{
+    background-color: rgb(36, 33, 33);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 77px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    width: 100%;
+    align-items: center;
+}
+/* Julius: navbar */
+nav li{
+    color: #fff;
+    text-decoration: none;
+}
+/*logo*/
+nav img{
+    width: 35%;
+}
+
+/*Nav colors updated*/
+nav li{
+    color: #fff;
+    text-decoration: none;
+}
+/*logo*/
+nav img{
+    width: 20%;
+}
+/*Switch types*/
+.upgrade-types{
+    display: flex;
+    justify-content: center;
+}
+.upgrade-types h1{
+  color: black;
+}
+/*Switch cards*/
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.card {
+    width: calc(33.33% - 20px);
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.card img{
+    width: 70%;
+    height: 70%;
+}
+.card h3 {
+    margin-top: 0;
+}
+.card p {
+    margin-bottom: 15px;
+}
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    border: none;
+}
+
+#cookieCounterMain{
+    display: flex;
+    margin-left: 2px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+/* DANGER: DONT TOUCH THIS CODE */
+.buildings-menu{
+    /* height: 100vh; */
+    width: 100%;
+    background-color: #1a1a1a;
+    max-height: 90vh;
+    overflow-y: auto; 
+    box-sizing: border-box;
+}
+/* DANGER:  DONT TOUCH THIS CODE UP HERE */
+
+
+.width-of-btn{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+button {
+    /* Border here */
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 10%);
+    color: white;
+    width: 800px;
+    border: 4px solid;
+    border-image: url('/Images/woodTexture.webp') 250;
+}
+
+.block-of-code{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Right side container for stats */
+.building-stats-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 25px;
+    background-color: #111;
+    width: 100%;
+    color: white;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto; 
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 11px;
+    color: hsl(0, 0%, 45%);
+    text-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.divider{
+    padding-top: 25px;
+}
+
+.owned-buildings{
+padding-top: 25px;    
+}
+
+button[type="submit"]{
+    width: 100px;
+    height: 35px;
+    margin-right: 25px;
+    margin-left: 25px;
+    flex-direction: row;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row-buttons{
+    display: flex;
+    flex-direction: row;
+    padding-top: 85px;
+}
+
+h4 {
+    padding-top: 10px;
+}
+
+#displayToBuy{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 200px;
+    color: white;
+    margin: 0;
+    padding: 0;
+    border: 3px solid gray;
+}
+
+#buyAndSell{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.buyBtn{
+    width: 50px;
+    height: 50px;
+}
+
+
+
+@font-face {
+    font-family: Clip;
+    src: url("https://acupoftee.github.io/fonts/Clip.ttf");
+  }
+  
+  
+  .sign {
+    display: flex;
+    align-items: center;
+    letter-spacing: 2;
+    font-size: 2.5rem;
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    animation: shine 2s forwards, flicker 3s infinite;
+  }
+  
+  @keyframes blink {
+    0%,
+    22%,
+    36%,
+    75% {
+      color: #ffe6ff;
+      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+        -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+        0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    }
+    28%,
+    33% {
+      color: #ff65bd;
+      text-shadow: none;
+    }
+    82%,
+    97% {
+      color: #ff2483;
+      text-shadow: none;
+    }
+  }
+  
+  .flicker {
+    animation: shine 2s forwards, blink 3s 2s infinite;
+  }
+  
+  .fast-flicker {
+    animation: shine 2s forwards, blink 10s 1s infinite;
+  }
+  
+  @keyframes shine {
+    0% {
+      color: #6b1839;
+      text-shadow: none;
+    }
+    100% {
+      color: #ffe6ff;
+      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+        -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+        0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    }
+  }
+  
+  @keyframes flicker {
+    from {
+      opacity: 1;
+    }
+  
+    4% {
+      opacity: 0.9;
+    }
+  
+    6% {
+      opacity: 0.85;
+    }
+  
+    8% {
+      opacity: 0.95;
+    }
+  
+    10% {
+      opacity: 0.9;
+    }
+  
+    11% {
+      opacity: 0.922;
+    }
+  
+    12% {
+      opacity: 0.9;
+    }
+  
+    14% {
+      opacity: 0.95;
+    }
+  
+    16% {
+      opacity: 0.98;
+    }
+  
+    17% {
+      opacity: 0.9;
+    }
+  
+    19% {
+      opacity: 0.93;
+    }
+  
+    20% {
+      opacity: 0.99;
+    }
+  
+    24% {
+      opacity: 1;
+    }
+  
+    26% {
+      opacity: 0.94;
+    }
+  
+    28% {
+      opacity: 0.98;
+    }
+  
+    37% {
+      opacity: 0.93;
+    }
+  
+    38% {
+      opacity: 0.5;
+    }
+  
+    39% {
+      opacity: 0.96;
+    }
+  
+    42% {
+      opacity: 1;
+    }
+  
+    44% {
+      opacity: 0.97;
+    }
+  
+    46% {
+      opacity: 0.94;
+    }
+  
+    56% {
+      opacity: 0.9;
+    }
+  
+    58% {
+      opacity: 0.9;
+    }
+  
+    60% {
+      opacity: 0.99;
+    }
+  
+    68% {
+      opacity: 1;
+    }
+  
+    70% {
+      opacity: 0.9;
+    }
+  
+    72% {
+      opacity: 0.95;
+    }
+  
+    93% {
+      opacity: 0.93;
+    }
+  
+    95% {
+      opacity: 0.95;
+    }
+  
+    97% {
+      opacity: 0.93;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
+
+/* Animations */
+ul li a {
+    text-align: center;
+    font-size: 30px;
+    color: #666;
+    transition: .5s;
+
+}
+  
+ul li a::before {
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+}
+
+ul li:nth-child(5) a:hover{
+    color: #7289da;
+    text-shadow: 0 0 5px #7289da;
+  }
+  
+  ul li:nth-child(6) a:hover{
+    color: #55acee;
+    text-shadow: 0 0 5px #55acee;
+  }
+  
+  ul li:nth-child(7) a:hover {
+    color: #2a475e;
+    text-shadow: 0 0 5px #2a475e;
+  }
+  
+  ul li:nth-child(8) a:hover {
+    color: #3b5999;
+    text-shadow: 0 0 5px #3b5999;
+  }
+
+
+
+/* ScrollBar Design, Juliau U can design as u want but for now here */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    background: black;
+}
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: hsla(0, 5%, 31%, 0.128);
+}
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(83, 81, 81);
+}
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(98, 94, 94);
+}
+
+
+/* PHONE AND TABLET COMPATIBLE */
+
+  @media (max-height: 600px) {
+    .container {
+        max-height: 60vh;
+    }
+}
+
+@media (max-height: 400px) {
+    .container {
+        max-height: 50vh;
+    }
+}

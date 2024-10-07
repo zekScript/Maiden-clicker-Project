@@ -1,0 +1,369 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/*will need Kalpoko help for this*/
+body{
+    background-image: url(/Images/background.jpg);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background: #262626; */
+}
+nav{
+    background-color: rgb(36, 33, 33);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 77px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    width: 100%;
+    align-items: center;
+}
+
+/*Nav colors updated*/
+nav li{
+    color: #fff;
+    text-decoration: none;
+}
+
+/*Switch types*/
+.upgrade-types{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    text-shadow: #fff 10px 0px 15px;
+}
+
+/*Switch cards*/
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#cookieCounterMain{
+    display: flex;
+    margin-left: 2px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.card {
+    width: calc(33.33% - 20px);
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.card img{
+    width: 70%;
+    height: 70%;
+}
+.card h3 {
+    margin-top: 0;
+    color: #fff;
+    text-shadow: #fff 10px 0px 15px;
+}
+.card p {
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #e0e03e;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    border: none;
+    position: relative;
+    cursor:pointer;
+    transition-duration: 0.4s;
+}
+
+
+/* Animations */
+
+
+.btn:hover {
+  transition-duration: 0.1s;
+  background-color: #fff700;
+}
+
+.btn:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  box-shadow: 0 0 10px 40px white;
+}
+
+.btn:active:after {
+  box-shadow: 0 0 0 0 white;
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top:0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.btn:active {
+  top: 1px;
+}
+
+
+@font-face {
+    font-family: Clip;
+    src: url("https://acupoftee.github.io/fonts/Clip.ttf");
+  }
+  
+  
+  .sign {
+    display: flex;
+    align-items: center;
+    letter-spacing: 2;
+    font-size: 2.5rem;
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    animation: shine 2s forwards, flicker 3s infinite;
+  }
+  
+  @keyframes blink {
+    0%,
+    22%,
+    36%,
+    75% {
+      color: #ffe6ff;
+      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+        -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+        0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    }
+    28%,
+    33% {
+      color: #ff65bd;
+      text-shadow: none;
+    }
+    82%,
+    97% {
+      color: #ff2483;
+      text-shadow: none;
+    }
+  }
+  
+  .flicker {
+    animation: shine 2s forwards, blink 3s 2s infinite;
+  }
+  
+  .fast-flicker {
+    animation: shine 2s forwards, blink 10s 1s infinite;
+  }
+  
+  @keyframes shine {
+    0% {
+      color: #6b1839;
+      text-shadow: none;
+    }
+    100% {
+      color: #ffe6ff;
+      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+        -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+        0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    }
+  }
+  
+  @keyframes flicker {
+    from {
+      opacity: 1;
+    }
+  
+    4% {
+      opacity: 0.9;
+    }
+  
+    6% {
+      opacity: 0.85;
+    }
+  
+    8% {
+      opacity: 0.95;
+    }
+  
+    10% {
+      opacity: 0.9;
+    }
+  
+    11% {
+      opacity: 0.922;
+    }
+  
+    12% {
+      opacity: 0.9;
+    }
+  
+    14% {
+      opacity: 0.95;
+    }
+  
+    16% {
+      opacity: 0.98;
+    }
+  
+    17% {
+      opacity: 0.9;
+    }
+  
+    19% {
+      opacity: 0.93;
+    }
+  
+    20% {
+      opacity: 0.99;
+    }
+  
+    24% {
+      opacity: 1;
+    }
+  
+    26% {
+      opacity: 0.94;
+    }
+  
+    28% {
+      opacity: 0.98;
+    }
+  
+    37% {
+      opacity: 0.93;
+    }
+  
+    38% {
+      opacity: 0.5;
+    }
+  
+    39% {
+      opacity: 0.96;
+    }
+  
+    42% {
+      opacity: 1;
+    }
+  
+    44% {
+      opacity: 0.97;
+    }
+  
+    46% {
+      opacity: 0.94;
+    }
+  
+    56% {
+      opacity: 0.9;
+    }
+  
+    58% {
+      opacity: 0.9;
+    }
+  
+    60% {
+      opacity: 0.99;
+    }
+  
+    68% {
+      opacity: 1;
+    }
+  
+    70% {
+      opacity: 0.9;
+    }
+  
+    72% {
+      opacity: 0.95;
+    }
+  
+    93% {
+      opacity: 0.93;
+    }
+  
+    95% {
+      opacity: 0.95;
+    }
+  
+    97% {
+      opacity: 0.93;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
+ul li a {
+    text-align: center;
+    font-size: 30px;
+    color: #666;
+    transition: .5s;
+
+}
+  
+ul li a::before {
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+}
+
+ul li:nth-child(5) a:hover{
+    color: #7289da;
+    text-shadow: 0 0 5px #7289da;
+  }
+  
+  ul li:nth-child(6) a:hover{
+    color: #55acee;
+    text-shadow: 0 0 5px #55acee;
+  }
+  
+  ul li:nth-child(7) a:hover {
+    color: #2a475e;
+    text-shadow: 0 0 5px #2a475e;
+  }
+  
+  ul li:nth-child(8) a:hover {
+    color: #3b5999;
+    text-shadow: 0 0 5px #3b5999;
+  }
+
+
+
+/* PHONE AND TABLET COMPATIBLE */
+/* orientation: portrait is when a phone is placed vertically */
+/* orientation: landscape is when a phone is placed Horizontally */
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+    /* Styles for phones in portrait orientation */
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Styles for tablets in landscape orientation */
+  }
+  

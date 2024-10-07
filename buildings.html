@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="buildings.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <title>Buildings - Maiden Clicker </title>
+</head>
+<body>
+    <nav>
+    <div class="sign">
+        <span class="fast-flicker">F</span>rom<span class="flicker">so</span>ftware
+      </div>
+    <ul>
+        <!-- THERE SHOULD BE BUILDINGS PAGE  -->
+        <a href="index.html" target="_blank"><li class="text-animation">Maiden Clicker</li></a>
+        <a href="upgrade.html" target="_blank"><li class="text-animation">Upgrade Station</li></a>
+       <a href="switches.html" target="_blank"><li class="text-animation">Switches</li></a>
+        <a href="buildings.html" target="_blank"><li class="text-animation">Buildings</li></a>
+            <li>
+              <a href="https://discord.gg/adrwnJFa" target="_blank">
+                <i class="fab fa-discord"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/MaidenClicker" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+              </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-steam"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-facebook"></i>
+              </a> 
+            </li>
+       <li id="cookieCounterMain">0 Maidens</li>
+    </ul>
+</nav>
+    <!-- Container when user wants to buy it -->
+    <section class="block-of-code">
+   <section>
+<div class="menuContainer">
+    <div class="buildings-menu">
+        <!-- Here my another idea of making button styles, u can try that-->
+    <button style="background-image: url('/Images/1A1A1A.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover;" type="button" class="width-of-btn" onclick="openCursorBuyMenu()">Cursor<p id="cursorPrice">15 maidens</p><p id="inTotal"></p></button>
+    <button style="background-image: url('/imagesForButtons/mimic.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover;" type="button" class="width-of-btn" onclick="openGrandmaBuyMenu()">Mimic<p id="grandmaPrice">100 Maidens</p><p id="grandmaInTotal"></p></button>
+    <button style="background-image: url('/imagesForButtons/1A1A1A.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover;" type="button" class="width-of-btn"  onclick="openFarmBuyMenu()">Pixel Maiden<p id="farmPrice">1,100 Maidens</p><p id="farmInTotal"></p></button>
+    <button style="background-image: url('/imagesForButtons/pixeltarnished.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover;" type="button" class="width-of-btn"  onclick="openMineBuyMenu()">Pixel Tarnished<p id="minePrice">12,000 Maidens</p><p id="mineInTotal"></p></button>
+    <button style="background-image: url('/imagesForButtons/bossFight.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover;" type="button" class="width-of-btn"  onclick="openFactoryBuyMenu()">Mini boss fight pixel<p id="factoryPrice">130,000 Maidens</p></button>
+    <button style="background-image: url('/imagesForButtons/trees.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover;" type="button" class="width-of-btn"  onclick="openBankBuyMenu()">Tiny blossom<p id="bankPrice">1,4 Million Maidens</p></button>
+    <button style="background-image: url('/imagesForButtons/infinity.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover;" type="button" class="width-of-btn"  onclick="openTempleBuyMenu()">Guts inspiration<p id="templePrice">20 Million Maidens</p></button>
+    <button style="background-image: url('/imagesForButtons/mantas.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover;" type="button" class="width-of-btn"  onclick="openWizardTowerBuyMenu()">Mantas Kalpokas<p id="wizardTowerPrice">330 Million Maidens</p></button>
+    <button style="background-image: url('/imagesForButtons/ernestas.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover;" type="button" class="width-of-btn"  onclick="openShipmentBuyMenu()">Ernestas<p id="shipmentPrice">5,1 Billion Maidens</p></button>
+    <button style="background-image: url('/imagesForButtons/martynas.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover;" type="button" class="width-of-btn"  onclick="openAlchemyLabBuyMenu()">Martynas<p id="alchemyLabPrice"> 75 Billion Maidens</p></button>
+    <button style="background-image: url('/imagesForButtons/babenskas.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover;" type="button" class="width-of-btn"  onclick="openPortalBuyMenu()">Babenskas<p id="portalPrice">1 Trillion Maidens</p></button>
+    <button style="background-image: url('/imagesForButtons/sniper.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover;" type="button" class="width-of-btn"  onclick="openTimeMachineBuyMenu()">Dev Sniper<p id="timeMachinePrice">14 Trillion Maidens</p></button>
+    <button style="background-image: url('/imagesForButtons/armandas.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover;" type="button" class="width-of-btn"  onclick="openantimatterCondenserBuyMenu()">Dev Armandas<p id="antiMatterCondensorPrice">170 Trillion cookies</p></button>
+    <button style="background-image: url('/imagesForButtons/cat.png'); background-repeat: no-repeat; background-position: center; background-size: cover;" type="button" class="width-of-btn"  onclick="openPrismBuyMenu()">Bread cat<p id="prismPrice">2,1 Quadrillion Maidens</p></button>
+    <button style="background-image: url('/imagesForButtons/raccon.png'); background-repeat: no-repeat; background-position: center; background-size: cover;" type="button" class="width-of-btn"  onclick="openChanceMakerBuyMenu()">RACCOON<p id="chanceMakerPrice">26 Quadrillion Maidens</p></button>
+    <button style="background-image: url('/imagesForButtons/maiden.png'); background-repeat: no-repeat; background-position: center; background-size: cover;" type="button" class="width-of-btn"  onclick="openFractialEngineBuyMenu()">Fire keeper<p id="fractialEnginePrice">310 Quadrillion Maidens</p></button>
+    </div>
+</div>
+<!-- container for buildings -->
+</section>
+
+<h1 id="introOnStart" style="color: white; font-size: 5rem; font-family: serif;">Select the Buildings you want to buy on the <span style="color: red; text-decoration: double; text-decoration-style: solid; font-family: cursive">left</span> side!</h1>
+
+<!-- Select style="display: none;" to display: flex; if u want to modify it, When youre done change it to none by default  -->
+<!-- As always DO NOT DELETE NOR CHANGE ID'S Just use CSS On it -->
+
+<!-- Cursor -->
+<div class="building-stats-container" style="display: none;">
+    <h3>Cursor</h3>
+    <p>"Autoclicks once every 10 seconds"</p>
+    <div class="divider"></div>
+    <!-- Placeholder -->
+    <img src="/Images/Buildings cursor.gif" width="250"> 
+    <h4>Owned: 0</h4>
+    <p class="p-stats">Cost: 18 maidens</p>
+    <div class="row-buttons">
+    <button type="submit" style="background-color: blueviolet; border: none;" onclick="buyCursor()">Buy</button>
+    <button type="submit">Sell</button>
+    </div>
+    <div style="display: flex; flex-direction: row; padding-top: 25px; gap: 10px;">
+    <input checked type="radio" name="preventSameSelection" id="times1Btn">1x
+    <input type="radio" name="preventSameSelection" id="times10Btn">10x
+    <input type="radio" name="preventSameSelection" id="times100Btn" style="padding-bottom: 10px;">100x
+    </div>
+</div>
+
+<!-- grandma -->
+<div class="building-stats-container" id="grandmaMenu" style="display: none;">
+    <h3>Mimic</h3>
+    <p>"Mimics Alot of the time"</p>
+    <div class="divider"></div>
+    <!-- Placeholder -->
+    <img src="/Images/Buildings mimic.webp" width="250"> 
+    <h4 id="cursorBuildingsOwned">Owned: 0</h4>
+    <p class="p-stats">Cost: 100 maidens</p>
+    <div class="row-buttons">
+    <button type="submit" style="background-color: blueviolet; border: none;" onclick="buyGrandma()">Buy</button>
+    <button type="submit">Sell</button>
+    </div>
+    <div style="display: flex; flex-direction: row; padding-top: 25px; gap: 10px;">
+    <input checked type="radio" name="preventSameSelection" id="times1Btn">1x
+    <input type="radio" name="preventSameSelection" id="times10Btn">10x
+    <input type="radio" name="preventSameSelection" id="times100Btn" style="padding-bottom: 10px;">100x
+    </div>
+</div>
+
+<!-- Farm -->
+<div class="building-stats-container" id="farmMenu" style="display: none;">
+    <h3>Pixel maiden</h3>
+    <p>"Vykes maiden was something diffrent."</p>
+    <div class="divider"></div>
+    <!-- Placeholder -->
+    <img src="/Images/Building maiden.gif" width="250"> 
+    <h4 id="farmBuildingOwner">Owned: 0</h4>
+    <p class="p-stats">Cost: 1100 maidens</p>
+    <div class="row-buttons">
+    <button type="submit" style="background-color: blueviolet; border: none;" onclick="buyFarm()">Buy</button>
+    <button type="submit">Sell</button>
+    </div>
+    <div style="display: flex; flex-direction: row; padding-top: 25px; gap: 10px;">
+    <input checked type="radio" name="preventSameSelection" id="times1Btn">1x
+    <input type="radio" name="preventSameSelection" id="times10Btn">10x
+    <input type="radio" name="preventSameSelection" id="times100Btn" style="padding-bottom: 10px;">100x
+    </div>
+</div>
+
+<!-- Mine -->
+<div class="building-stats-container" id="mineMenu" style="display: none;">
+    <h3>Pixel tarnished</h3>
+    <p>"Pure tarnished is here to accompany you"</p>
+    <div class="divider"></div>
+    <!-- Placeholder -->
+    <img src="/Images/building Tarnished.gif" width="250"> 
+    <h4 id="mineBuildingOwner">Owned: 0</h4>
+    <p class="p-stats">Cost: 12000 maidens</p>
+    <div class="row-buttons">
+    <button type="submit" style="background-color: blueviolet; border: none;" onclick="buyMine()">Buy</button>
+    <button type="submit">Sell</button>
+    </div>
+    <div style="display: flex; flex-direction: row; padding-top: 25px; gap: 10px;">
+    <input checked type="radio" name="preventSameSelection" id="times1Btn">1x
+    <input type="radio" name="preventSameSelection" id="times10Btn">10x
+    <input type="radio" name="preventSameSelection" id="times100Btn" style="padding-bottom: 10px;">100x
+    </div>
+</div>
+
+<!-- Factory -->
+<div class="building-stats-container" id="factoryMenu" style="display: none;">
+    <h3>Mini pixel boss fight</h3>
+    <p>"A cute epic boss fight as a collectable"</p>
+    <div class="divider"></div>
+    <!-- Placeholder -->
+    <img src="/Images/Building boss.gif" width="250"> 
+    <h4>Owned: 0</h4>
+    <p class="p-stats">Cost: 130000 maidens</p>
+    <div class="row-buttons">
+    <button type="submit" style="background-color: blueviolet; border: none;" onclick="buyCursor()">Buy</button>
+    <button type="submit">Sell</button>
+    </div>
+    <div style="display: flex; flex-direction: row; padding-top: 25px; gap: 10px;">
+    <input checked type="radio" name="preventSameSelection" id="times1Btn">1x
+    <input type="radio" name="preventSameSelection" id="times10Btn">10x
+    <input type="radio" name="preventSameSelection" id="times100Btn" style="padding-bottom: 10px;">100x
+    </div>
+</div>
+
+<!-- grandma -->
+<div class="building-stats-container" id="factoryMenu" style="display: none;">
+    <h3>Tiny blossom</h3>
+    <p>"A blossom tree that brings some peace to you"</p>
+    <div class="divider"></div>
+    <!-- Placeholder -->
+    <img src="/Images/Buildings blossom.gif" width="250"> 
+    <h4>Owned: 0</h4>
+    <p class="p-stats">Cost: 1400000 maidens</p>
+    <div class="row-buttons">
+    <button type="submit" style="background-color: blueviolet; border: none;" onclick="buyFactory()">Buy</button>
+    <button type="submit">Sell</button>
+    </div>
+    <div style="display: flex; flex-direction: row; padding-top: 25px; gap: 10px;">
+    <input checked type="radio" name="preventSameSelection" id="times1Btn">1x
+    <input type="radio" name="preventSameSelection" id="times10Btn">10x
+    <input type="radio" name="preventSameSelection" id="times100Btn" style="padding-bottom: 10px;">100x
+    </div>
+</div>
+
+<!-- grandma -->
+<div class="building-stats-container" id="bankMenu" style="display: none;">
+    <h3>Tint blossom</h3>
+    <p>"A blossom tree that brings some peace to you"</p>
+    <div class="divider"></div>
+    <!-- Placeholder -->
+    <img src="/Images/Buildings-blossom.gif" width="250"> 
+    <h4>Owned: 0</h4>
+    <p class="p-stats">Cost: 20000000 maidens</p>
+    <div class="row-buttons">
+    <button type="submit" style="background-color: blueviolet; border: none;" onclick="buyBank()">Buy</button>
+    <button type="submit">Sell</button>
+    </div>
+    <div style="display: flex; flex-direction: row; padding-top: 25px; gap: 10px;">
+    <input checked type="radio" name="preventSameSelection" id="times1Btn">1x
+    <input type="radio" name="preventSameSelection" id="times10Btn">10x
+    <input type="radio" name="preventSameSelection" id="times100Btn" style="padding-bottom: 10px;">100x
+    </div>
+</div>
+
+<!-- grandma -->
+<div class="building-stats-container" id="templeMenu" style="display: none;">
+    <h3>Guts Symbol</h3>
+    <p>"Beserks inspiration never failed."</p>
+    <div class="divider"></div>
+    <!-- Placeholder -->
+    <img src="/Images/Buldings guts symbol.gif" width="250"> 
+    <h4>Owned: 0</h4>
+    <p class="p-stats">Cost: 330000000 maidens</p>
+    <div class="row-buttons">
+    <button type="submit" style="background-color: blueviolet; border: none;" onclick="buyTemple()">Buy</button>
+    <button type="submit">Sell</button>
+    </div>
+    <div style="display: flex; flex-direction: row; padding-top: 25px; gap: 10px;">
+    <input checked type="radio" name="preventSameSelection" id="times1Btn">1x
+    <input type="radio" name="preventSameSelection" id="times10Btn">10x
+    <input type="radio" name="preventSameSelection" id="times100Btn" style="padding-bottom: 10px;">100x
+    </div>
+</div>
+
+<!-- grandma -->
+<div class="building-stats-container" id="wizardTowerMenu" style="display: none;">
+    <h3>Mantas Kalpokas</h3>
+    <p>"True inspiration for maiden clicker (He watched over me while I was looking for maiden pictures)"</p>
+    <div class="divider"></div>
+    <!-- Placeholder -->
+    <img src="/Images/Mantas Kalpokas.gif" width="250"> 
+    <h4>Owned: 0</h4>
+    <p class="p-stats">Cost: 5100000000 maidens</p>
+    <div class="row-buttons">
+    <button type="submit" style="background-color: blueviolet; border: none;" onclick="buyWizard()">Buy</button>
+    <button type="submit">Sell</button>
+    </div>
+    <div style="display: flex; flex-direction: row; padding-top: 25px; gap: 10px;">
+    <input checked type="radio" name="preventSameSelection" id="times1Btn">1x
+    <input type="radio" name="preventSameSelection" id="times10Btn">10x
+    <input type="radio" name="preventSameSelection" id="times100Btn" style="padding-bottom: 10px;">100x
+    </div>
+</div>
+
+<!-- grandma -->
+<div class="building-stats-container" id="shipmentMenu" style="display: none;">
+    <h3>Ernestas</h3>
+    <p>"We added some classmates I ran out of ideas."</p>
+    <div class="divider"></div>
+    <!-- Placeholder -->
+    <img src="/Images/Ernestas.gif" width="250"> 
+    <h4>Owned: 0</h4>
+    <p class="p-stats">Cost: 75000000000 maidens</p>
+    <div class="row-buttons">
+    <button type="submit" style="background-color: blueviolet; border: none;" onclick="shipment()">Buy</button>
+    <button type="submit">Sell</button>
+    </div>
+    <div style="display: flex; flex-direction: row; padding-top: 25px; gap: 10px;">
+    <input checked type="radio" name="preventSameSelection" id="times1Btn">1x
+    <input type="radio" name="preventSameSelection" id="times10Btn">10x
+    <input type="radio" name="preventSameSelection" id="times100Btn" style="padding-bottom: 10px;">100x
+    </div>
+</div>
+
+<!-- grandma -->
+<div class="building-stats-container" id="alchemyLabMenu" style="display: none;">
+    <h3>Martynas </h3>
+    <p>"The honored one who killed Ernestas"</p>
+    <div class="divider"></div>
+    <!-- Placeholder -->
+    <img src="/Images/Martynas.gif" width="250"> 
+    <h4>Owned: 0</h4>
+    <p class="p-stats">Cost: 1000000000000 maidens</p>
+    <div class="row-buttons">
+    <button type="submit" style="background-color: blueviolet; border: none;" onclick="buyAlchemyLab()">Buy</button>
+    <button type="submit">Sell</button>
+    </div>
+    <div style="display: flex; flex-direction: row; padding-top: 25px; gap: 10px;">
+    <input checked type="radio" name="preventSameSelection" id="times1Btn">1x
+    <input type="radio" name="preventSameSelection" id="times10Btn">10x
+    <input type="radio" name="preventSameSelection" id="times100Btn" style="padding-bottom: 10px;">100x
+    </div>
+</div>
+
+<!-- grandma -->
+<div class="building-stats-container" id="portalMenu" style="display: none;">
+    <h3>Babenskas</h3>
+    <p>"Not racist (Maybe) very close to the honored one"</p>
+    <div class="divider"></div>
+    <!-- Placeholder -->
+    <img src="/Images/Babenskas.gif" width="250"> 
+    <h4>Owned: 0</h4>
+    <p class="p-stats">Cost: 14000000000000 maidens</p>
+    <div class="row-buttons">
+    <button type="submit" style="background-color: blueviolet; border: none;" onclick="buyPortal()">Buy</button>
+    <button type="submit">Sell</button>
+    </div>
+    <div style="display: flex; flex-direction: row; padding-top: 25px; gap: 10px;">
+    <input checked type="radio" name="preventSameSelection" id="times1Btn">1x
+    <input type="radio" name="preventSameSelection" id="times10Btn">10x
+    <input type="radio" name="preventSameSelection" id="times100Btn" style="padding-bottom: 10px;">100x
+    </div>
+</div>
+
+<!-- grandma -->
+<div class="building-stats-container" id="timeMachineMenu" style="display: none;">
+    <h3>Dev Sniper</h3>
+    <p>"IF not Kalpokas calling me bad in souls games I would have never dedicated myself to beating them. (I beat sekiro only for now)"</p>
+    <div class="divider"></div>
+    <!-- Placeholder -->
+    <img src="/Images/Developer Sniper.gif" width="250"> 
+    <h4>Owned: 0</h4>
+    <p class="p-stats">Cost: 170000000000000 maidens</p>
+    <div class="row-buttons">
+    <button type="submit" style="background-color: blueviolet; border: none;" onclick="buyTimeMachine()">Buy</button>
+    <button type="submit">Sell</button>
+    </div>
+    <div style="display: flex; flex-direction: row; padding-top: 25px; gap: 10px;">
+    <input checked type="radio" name="preventSameSelection" id="times1Btn">1x
+    <input type="radio" name="preventSameSelection" id="times10Btn">10x
+    <input type="radio" name="preventSameSelection" id="times100Btn" style="padding-bottom: 10px;">100x
+    </div>
+</div>
+
+<!-- grandma -->
+<div class="building-stats-container" id="antimatterCondenserMenu" style="display: none;"> 
+    <h3>Dev Armandas</h3>
+    <p>"I did all of the JavaScripting (Almost broke the laptop 3 times)"</p>
+    <div class="divider"></div>
+    <!-- Placeholder -->
+    <img src="/Images/Dev Armandas.gif" width="250"> 
+    <h4>Owned: 0</h4>
+    <p class="p-stats">Cost: 2100000000000000 maidens</p>
+    <div class="row-buttons">
+    <button type="submit" style="background-color: blueviolet; border: none;" onclick="buyAntimatterCondenser()">Buy</button>
+    <button type="submit">Sell</button>
+    </div>
+    <div style="display: flex; flex-direction: row; padding-top: 25px; gap: 10px;">
+    <input checked type="radio" name="preventSameSelection" id="times1Btn">1x
+    <input type="radio" name="preventSameSelection" id="times10Btn">10x
+    <input type="radio" name="preventSameSelection" id="times100Btn" style="padding-bottom: 10px;">100x
+    </div>
+</div>
+
+<!-- grandma -->
+<div class="building-stats-container" id="prismMenu" style="display: none;">
+    <h3>Bread Cat</h3>
+    <p>"A cat you will not eat instead you will love it"</p>
+    <div class="divider"></div>
+    <!-- Placeholder -->
+    <img src="/Images/Bread cat.gif" width="250"> 
+    <h4>Owned: 0</h4>
+    <p class="p-stats">Cost: 26000000000000000 maidens</p>
+    <div class="row-buttons">
+    <button type="submit" style="background-color: blueviolet; border: none;" onclick="buyPrism()">Buy</button>
+    <button type="submit">Sell</button>
+    </div>
+    <div style="display: flex; flex-direction: row; padding-top: 25px; gap: 10px;">
+    <input checked type="radio" name="preventSameSelection" id="times1Btn">1x
+    <input type="radio" name="preventSameSelection" id="times10Btn">10x
+    <input type="radio" name="preventSameSelection" id="times100Btn" style="padding-bottom: 10px;">100x
+    </div>
+</div>
+
+<!-- grandma -->
+<div class="building-stats-container" id="chanceMakerMenu" style="display: none;">
+    <h3>RACCOON </h3>
+    <p>"Dev Sniper's favourite animal you won't change his mind we already tried"</p>
+    <div class="divider"></div>
+    <!-- Placeholder -->
+    <img src="/Images/Dev snipers fav pet.gif" width="250"> 
+    <h4>Owned: 0</h4>
+    <p class="p-stats">Cost: 310000000000000000 maidens</p>
+    <div class="row-buttons">
+    <button type="submit" style="background-color: blueviolet; border: none;" onclick="buyChancemaker()">Buy</button>
+    <button type="submit">Sell</button>
+    </div>
+    <div style="display: flex; flex-direction: row; padding-top: 25px; gap: 10px;">
+    <input checked type="radio" name="preventSameSelection" id="times1Btn">1x
+    <input type="radio" name="preventSameSelection" id="times10Btn">10x
+    <input type="radio" name="preventSameSelection" id="times100Btn" style="padding-bottom: 10px;">100x
+    </div>
+</div>
+
+<!-- grandma -->
+<div class="building-stats-container" id="fractialEngineMenu" style="display: none;">
+    <h3>Fire keeper</h3>
+    <p>"While Kalpokas was slaying beast's, Sniper kept yapping to the fire keeper."</p>
+    <div class="divider"></div>
+    <!-- Placeholder -->
+    <img src="/Images/Favourite maiden.webp" width="250"> 
+    <h4>Owned: 0</h4>
+    <p class="p-stats">Cost: 7100000000000000000 maidens</p>
+    <div class="row-buttons">
+    <button type="submit" style="background-color: blueviolet; border: none;" onclick="buyFractalEngine()">Buy</button>
+    <button type="submit">Sell</button>
+    </div>
+    <div style="display: flex; flex-direction: row; padding-top: 25px; gap: 10px;">
+    <input checked type="radio" name="preventSameSelection" id="times1Btn">1x
+    <input type="radio" name="preventSameSelection" id="times10Btn">10x
+    <input type="radio" name="preventSameSelection" id="times100Btn" style="padding-bottom: 10px;">100x
+    </div>
+</div>
+</section>
+    <script src="buildingScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,691 @@
+*{
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html{
+    overflow: hidden;
+}
+
+body{
+    margin: 0;
+     
+}
+
+button{
+    cursor: pointer;
+}
+
+.middle-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: 10px solid;
+    border-image: url('/Images/bloodybrickTexture.png') 230;
+    width: 100%;
+    background: black;
+}
+
+.left-container{
+    border-right: 10px solid;
+    border-image: url('/Images/bloodybrickTexture.png') 120;
+    height: 100%;
+    background-image: url(/Images/background\ gnagster.gif);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+
+}
+
+.column-pos{
+    display: flex;
+    flex-direction: column;
+}
+.background-for-this{
+    color: #fff;
+}
+
+#cancelBtnLegacy{
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+#cancelBtnLegacy:hover{
+    background-color: #454444;
+
+}
+
+.take-width{
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+
+}
+
+.block-of-code{
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-container{
+    display: flex;
+    justify-content: right;
+    max-width: 350px;
+    border: 2px solid black;
+}
+
+#bakeryName, #cookieCounter, #cookieMathPerSecond, .mainCookie{
+    display: flex;
+    justify-content: center;
+    width: 50vh;
+    margin-left: 30px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+#cookieCounterMain{
+    display: flex;
+    margin-left: 2px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+
+
+.align-buildings-right{
+    display: flex;
+    flex-direction: column;
+
+}
+
+input[type="submit"]{
+    height: 20px;
+    border-radius: 50px;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+}
+
+#mainCookieClicker{
+    margin-top: 40px;
+    background-color: hsla(0, 0%, 10%, 0.6);
+    border: none;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background-image: url(/Images/Maiden_in_black.png);
+    transition: transform 0.1s ease-in-out;
+}
+
+
+
+#mainCookieClicker:active {
+    transform: scale(1.1);
+}
+.position{
+    display: flex;
+    justify-content: center;
+}
+
+
+button{
+    width: 60px;
+}
+
+.options{
+    background: hsla(0, 0%, 10%, 0.5);
+    color: white;
+    border: 1px solid rgb(141, 130, 12);
+}
+
+.other-options{
+    background: hsla(0, 0%, 10%, 0.5);
+    border: 1px solid rgb(141, 130, 12);
+    margin: 3px;
+    color: white;
+}
+
+
+
+
+
+.top-buttons {
+    width: 120px;
+    font-size: 17px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.top-buttons:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.top-buttons:active {
+    color: #000
+}
+
+.top-buttons:active:after {
+    background: transparent;
+}
+
+.top-buttons:hover:before {
+    opacity: 1;
+}
+
+.top-buttons:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+
+.color-text{
+    color: hsl(0, 0%, 45%);
+    margin-bottom: 3.5px;
+}
+
+#bakeryName {
+    background-color: hsla(0, 0%, 0%, 0.4);
+    color: white;
+    border: none;
+    border-radius: 25%;
+}
+
+.divider{
+    padding-bottom: 30px;
+}
+
+.width-of-btn{
+    width: 100%;
+    height: 100px;
+    margin-bottom: 5px;
+    border: solid 2px black;
+}
+
+.store-center{
+    text-align: center;
+}
+
+.stats-container{
+    border-left: 10px solid;
+    border-image: url('/Images/bloodybrickTexture.png') 80;
+    width: 100%;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 15rem;
+    overflow-y: auto;
+    background-image: url(/Images/background\ monkey.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+}
+/*nav will need to be discused about because of logo issues*/
+nav{
+    background-color: rgb(36, 33, 33);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 77px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    width: 100%;
+    align-items: center;
+}
+
+/* Julius: navbar */
+nav li{
+    color: #fff;
+    text-decoration: none;
+}
+/*logo*/
+nav img{
+    width: 20%;
+}
+
+#bakeryName {
+    margin-right: 30px;
+}
+
+
+
+/* Info button stylesheet down here */
+
+a{
+    text-decoration: none;
+}
+
+
+h3{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+
+.center-container{
+    height: 100%;
+    background-image: url(/Images/background\ middle.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+}
+
+.margin-from-left{
+    margin-left: 10px;
+}
+/*Easter egg*/
+.margin-from-left a{
+    text-decoration: none;
+    color: #fff;
+}
+.info{
+    flex-direction: column;
+    display: none;
+    max-height: 75vh;
+    overflow-y: auto; 
+    box-sizing: border-box;
+}
+
+.move-button{
+    display: flex;
+    justify-content: flex-end;
+}
+
+ol {
+    list-style-type:none;
+}
+
+
+button[type="button"]{
+    width: 60px;
+    background: transparent;
+    border: none;
+}
+/* Legacy Window */
+#legacyWindow{
+    width: 250px;
+    height: 250px;
+    background-color: hsl(0, 0%, 14%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+
+}
+
+
+.behindLegacyWindow{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: hsl(0, 0%, 10%);
+    border-radius: 5px;
+    
+}
+
+.legacyInfo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 12px;
+}
+
+/* Options Stylesheet */
+
+#optionsWindow{
+  max-height: 75vh;
+  overflow-y: auto; 
+  box-sizing: border-box;
+}
+
+.languageStyle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#languageSelection{
+    width: 150px;
+    margin-left: 15px;
+    height: 25px;
+}
+
+.saveStyle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    border-bottom: 0.5px solid hsl(0, 0%, 78%);
+}
+
+.importAndExportSaveStyle {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+
+}
+
+
+
+.optionBtns{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.options{
+    width: 180px;
+    height: 35px;
+    text-align: end;
+    margin-left: 20px;
+}
+
+/* Animation */
+  
+ul li a {
+    text-align: center;
+    font-size: 30px;
+    color: #666;
+    transition: .5s;
+
+}
+  
+ul li a::before {
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+}
+
+ul li:nth-child(5) a:hover{
+    color: #7289da;
+    text-shadow: 0 0 5px #7289da;
+  }
+  
+  ul li:nth-child(6) a:hover{
+    color: #55acee;
+    text-shadow: 0 0 5px #55acee;
+  }
+  
+  ul li:nth-child(7) a:hover {
+    color: #2a475e;
+    text-shadow: 0 0 5px #2a475e;
+  }
+  
+  ul li:nth-child(8) a:hover {
+    color: #3b5999;
+    text-shadow: 0 0 5px #3b5999;
+  }
+
+@font-face {
+    font-family: Clip;
+    src: url("https://acupoftee.github.io/fonts/Clip.ttf");
+  }
+  
+  
+  .sign {
+    display: flex;
+    align-items: center;
+    letter-spacing: 2;
+    font-size: 2.5rem;
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    animation: shine 2s forwards, flicker 3s infinite;
+  }
+  
+  @keyframes blink {
+    0%,
+    22%,
+    36%,
+    75% {
+      color: #ffe6ff;
+      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+        -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+        0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    }
+    28%,
+    33% {
+      color: #ff65bd;
+      text-shadow: none;
+    }
+    82%,
+    97% {
+      color: #ff2483;
+      text-shadow: none;
+    }
+  }
+  
+  .flicker {
+    animation: shine 2s forwards, blink 3s 2s infinite;
+  }
+  
+  .fast-flicker {
+    animation: shine 2s forwards, blink 10s 1s infinite;
+  }
+  
+  @keyframes shine {
+    0% {
+      color: #6b1839;
+      text-shadow: none;
+    }
+    100% {
+      color: #ffe6ff;
+      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+        -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+        0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    }
+  }
+  
+  @keyframes flicker {
+    from {
+      opacity: 1;
+    }
+  
+    4% {
+      opacity: 0.9;
+    }
+  
+    6% {
+      opacity: 0.85;
+    }
+  
+    8% {
+      opacity: 0.95;
+    }
+  
+    10% {
+      opacity: 0.9;
+    }
+  
+    11% {
+      opacity: 0.922;
+    }
+  
+    12% {
+      opacity: 0.9;
+    }
+  
+    14% {
+      opacity: 0.95;
+    }
+  
+    16% {
+      opacity: 0.98;
+    }
+  
+    17% {
+      opacity: 0.9;
+    }
+  
+    19% {
+      opacity: 0.93;
+    }
+  
+    20% {
+      opacity: 0.99;
+    }
+  
+    24% {
+      opacity: 1;
+    }
+  
+    26% {
+      opacity: 0.94;
+    }
+  
+    28% {
+      opacity: 0.98;
+    }
+  
+    37% {
+      opacity: 0.93;
+    }
+  
+    38% {
+      opacity: 0.5;
+    }
+  
+    39% {
+      opacity: 0.96;
+    }
+  
+    42% {
+      opacity: 1;
+    }
+  
+    44% {
+      opacity: 0.97;
+    }
+  
+    46% {
+      opacity: 0.94;
+    }
+  
+    56% {
+      opacity: 0.9;
+    }
+  
+    58% {
+      opacity: 0.9;
+    }
+  
+    60% {
+      opacity: 0.99;
+    }
+  
+    68% {
+      opacity: 1;
+    }
+  
+    70% {
+      opacity: 0.9;
+    }
+  
+    72% {
+      opacity: 0.95;
+    }
+  
+    93% {
+      opacity: 0.93;
+    }
+  
+    95% {
+      opacity: 0.95;
+    }
+  
+    97% {
+      opacity: 0.93;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    background: black;
+}
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: hsla(0, 5%, 31%, 0.128);
+}
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: white;
+}
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: white;
+}
+
+/* PHONE AND TABLET COMPATIBLE */
+/* orientation: portrait is when a phone is placed vertically */
+/* orientation: landscape is when a phone is placed Horizontally */
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+    /* Styles for phones in portrait orientation */
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Styles for tablets in landscape orientation */
+  }
