@@ -15,6 +15,7 @@ Todo list:
 // IMPORTING FUNCTIONS HERE
 
 
+const warningWindowForNoName = document.getElementById("warningWindowForNoName");
 // My buttons bellow / Prices upper way
 const inTotal = document.getElementById("inTotal");
 const times1Btn = document.getElementById("times1Btn");
@@ -120,6 +121,7 @@ const darkSoulsNews = [
     "News: FromSoftware announced collaborations with other studios to bring Dark Souls characters and content to other games, sparking crossover events and collaborations.",
     "News: The Dark Souls community organized fan conventions and meetups, providing opportunities for fans to connect with each other and share their passion for the series."
 ];
+
 // Legacy button Function
 
 legacyBtn.addEventListener("click", () => {
@@ -158,20 +160,23 @@ setInterval(() => {
 
 mainCookieClicker.onclick = cookiesMadePerSecond;
 
-bakeryName.addEventListener("click", () => {
-    changeName = window.prompt("How do you want to name your Maiden Army?");
-    if(changeName == ""){
-        alert("You didn't write anything, it will change to a default name"); //Placeholder
-        const randomDefaultNameGenerator = Math.floor(Math.random() * defaultBakeryNames.length);
-        bakeryName.textContent = `${defaultBakeryNames[randomDefaultNameGenerator]}${defaultEndBakeryName}`;
-    }
-    else if(changeName === null){
-        return bakeryName;
-    }
-    else{
-        bakeryName.textContent = `${changeName}${defaultEndBakeryName}`;
-    }
-})
+// bakeryName.addEventListener("click", () => {
+//     // changeName = window.prompt("How do you want to name your Maiden Army?");
+//     // if(changeName == ""){
+        
+//     //     warningWindowForNoName.style.display = "block";
+//     //     const randomDefaultNameGenerator = Math.floor(Math.random() * defaultBakeryNames.length);
+//     //     bakeryName.textContent = `${defaultBakeryNames[randomDefaultNameGenerator]}${defaultEndBakeryName}`;
+//     // }
+//     // else if(changeName === null){
+//     //     return bakeryName;
+//     // }
+//     // else{
+//     //     bakeryName.textContent = `${changeName}${defaultEndBakeryName}`;
+//     // }
+// })
+
+
 
 
 window.addEventListener("load", () => {
@@ -232,7 +237,7 @@ setInterval(() => {
     updateUI(cookiesMade, count);
     // Making cookies per Second function
     let cursorCount = localStorage.getItem('cursorCount');
-    let cursorCPS = 0.1;
+    let cursorCPS = 0.1; // get cps from building
     let cursorMakesPerSecondMath = cursorCount * cursorCPS;
     cursorMakesPerSecondMath = Math.round(cursorMakesPerSecondMath * 10) / 10;
     // OTHER buildingCount functions go here ctrl+ v here but i'm just to lazy and tired doing this project

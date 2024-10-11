@@ -78,27 +78,27 @@ let times100 = 100;
 let countStats = 0;
 let buildingMadeCookies = 0;
 // booleans
-isCursorOpen = false;
-isGrandmaOpen = false;
-isFarmOpen = false;
-isMineOpen = false;
-isFactoryOpen = false;
-isBankOpen = false;
-isTempleOpen = false;
-isWizardTowerOpen = false;
-isShipmentOpen = false;
-isAlchemyLabOpen = false;
-isPortalOpen = false;
-isTimeMachineOpen = false;
-isAntimatterCondenserOpen = false;
-isPrismOpen = false;
-isChanceMakerOpen = false;
-isFractialEngineOpen = false;
-isJavascriptConsoleOpen = false;
-isIdleVerseOpen = false;
-isCortexBakerOpen = false;
-isYouOpen = false;
-hasBought = false;
+let isCursorOpen = false;
+let isGrandmaOpen = false;
+let isFarmOpen = false;
+let isMineOpen = false;
+let isFactoryOpen = false;
+let isBankOpen = false;
+let isTempleOpen = false;
+let isWizardTowerOpen = false;
+let isShipmentOpen = false;
+let isAlchemyLabOpen = false;
+let isPortalOpen = false;
+let isTimeMachineOpen = false;
+let isAntimatterCondenserOpen = false;
+let isPrismOpen = false;
+let isChanceMakerOpen = false;
+let isFractialEngineOpen = false;
+let isJavascriptConsoleOpen = false;
+let isIdleVerseOpen = false;
+let isCortexBakerOpen = false;
+let isYouOpen = false;
+let hasBought = false;
 
 
 
@@ -541,7 +541,7 @@ window.addEventListener("load", () => {
     cookieCounterMain.innerHTML = `maidens: ${cookiesMade}`
 })
 function buyCursor(){
-    let cookiesMade = Number(localStorage.getItem('cookiesMade')) || 0;
+    cookiesMade = Number(localStorage.getItem('cookiesMade')) || 0;
     const price = Math.ceil(buildings.cursor.cost * Math.pow(1.15, buildings.cursor.count));
 
     if(cookiesMade >= price){

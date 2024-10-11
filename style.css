@@ -5,6 +5,8 @@
 
 html{
     overflow: hidden;
+    background-image: url("https://repository-images.githubusercontent.com/534702119/ee3b5f1b-3f01-439e-a558-68ed5aabce41");
+    color: white;
 }
 
 body{
@@ -23,19 +25,13 @@ button{
     border-bottom: 10px solid;
     border-image: url('/Images/bloodybrickTexture.png') 230;
     width: 100%;
-    background: black;
+    height: 170px;
 }
 
 .left-container{
     border-right: 10px solid;
     border-image: url('/Images/bloodybrickTexture.png') 120;
     height: 100%;
-    background-image: url(/Images/background\ gnagster.gif);
-    background-size: cover; 
-    background-repeat: no-repeat;
-    background-position: center;
-    color: #fff;
-
 }
 
 .column-pos{
@@ -46,11 +42,11 @@ button{
     color: #fff;
 }
 
+
 #cancelBtnLegacy{
     background-color: #333;
     color: white;
     border: none;
-    border-radius: 5px;
     font-size: 12px;
 }
 
@@ -60,13 +56,16 @@ button{
 }
 
 .take-width{
-    width: 100%;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    margin-top: 0;
-    display: flex;
-    justify-content: center;
-
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-right: 1em;
+  padding-left: 1em;
+  font-size: 1.3em;
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  font-style: normal;
+  text-shadow: 0px 1px 0px #444, 0px 0px 4px #000;
 }
 
 .block-of-code{
@@ -110,14 +109,16 @@ input[type="submit"]{
 }
 
 #mainCookieClicker{
-    margin-top: 40px;
     background-color: hsla(0, 0%, 10%, 0.6);
-    border: none;
-    height: 250px;
-    width: 250px;
-    border-radius: 50%;
-    background-image: url(/Images/Maiden_in_black.png);
     transition: transform 0.1s ease-in-out;
+    width: 256px;
+    height: 256px;
+    cursor: pointer;
+    z-index: 10000;
+    border-radius: 128px;
+    border: none;
+    overflow: hidden;
+    outline: none;
 }
 
 
@@ -154,8 +155,8 @@ button{
 
 .top-buttons {
     width: 120px;
-    font-size: 17px;
-    height: 50px;
+    font-size: 24px;
+    height: 100%;
     border: none;
     outline: none;
     color: #fff;
@@ -163,7 +164,7 @@ button{
     cursor: pointer;
     position: relative;
     z-index: 0;
-    border-radius: 10px;
+    text-shadow: 0px 1px 0px #444, 0px 0px 4px #000;
 }
 
 .top-buttons:before {
@@ -253,7 +254,7 @@ button{
     flex-direction: column;
     margin-right: 15rem;
     overflow-y: auto;
-    background-image: url(/Images/background\ monkey.gif);
+    /* background-image: url("https://repository-images.githubusercontent.com/534702119/ee3b5f1b-3f01-439e-a558-68ed5aabce41"); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -311,10 +312,11 @@ h3{
 
 .center-container{
     height: 100%;
-    background-image: url(/Images/background\ middle.gif);
-    background-size: cover;
+    /* background-image: url(/Images/background\ middle.gif); */
+
+    /* background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; */
     color: #fff;
 }
 
@@ -329,9 +331,13 @@ h3{
 .info{
     flex-direction: column;
     display: none;
-    max-height: 75vh;
-    overflow-y: auto; 
-    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: absolute;
+    top: 245px;
+    left: 430px;
+    bottom: 0px;
+    right: 320px;
 }
 
 .move-button{
@@ -385,9 +391,13 @@ button[type="button"]{
 /* Options Stylesheet */
 
 #optionsWindow{
-  max-height: 75vh;
-  overflow-y: auto; 
-  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: absolute;
+  top: 245px;
+  left: 430px;
+  bottom: 0px;
+  right: 320px;
 }
 
 .languageStyle{
