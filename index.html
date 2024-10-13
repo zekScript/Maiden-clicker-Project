@@ -14,7 +14,7 @@
     <!-- !!!!!IF YOU SEE ID ATTRIBUTE DONT DELETE THEM!!!! -->
     <nav >
         <div class="sign">
-            <span class="fast-flicker">F</span>rom<span class="flicker">so</span>ftware
+            <span class="fast-flicker">Incre</span>ment<span class="flicker">al</span>Hub
           </div>
         <ul>
             <a href="index.html" target="_blank"><li class="text-animation">Maiden Clicker</li></a>
@@ -141,6 +141,27 @@
                     
                 </div>
             </section>
+            <div id="darken"></div>
+            <!-- Prompts here -->
+            <div id="changeNamePrompt" class="change-name-prompt">
+                <div class="behindLegacyWindow" style="border: 4px solid; border-image: url(/Images/woodTexture.webp) 250; width: 300px; height: 165px; z-index: 100000000000"><button id="closeChangeBakeryNameWindow" style="background: transparent; color: white; border: none; width: 25px; float: right;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="22" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                  </svg></button>
+                <div>
+                    <div class="bakery-name-change-div">
+                        <h3 style="font-size: 18px;">Name Your bakery</h3>
+                        <p style="text-align: center">How Do you want to name your bakery?</p>
+                        <input style="text-align: center;" type="text" maxlength="32" id="bakeryNameChange">
+                    </div>
+                <div class="inner-Prompt-btns">
+                    <button id="confirmNameChange">Confirm</button>
+                    <button id="randomNameChange">Random</button>
+                    <button id="cancelNameChange">Cancel</button>
+                </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Legacy window -->
             <!-- Change display: block to design the window -->
             <div id="mainLegacyWindow" style="display: none;">

@@ -12,9 +12,21 @@ Todo list:
 9) when bought take away cookies *DONE*
 10) GOODLUCK!
 */
-// IMPORTING FUNCTIONS HERE
+
+// document.addEventListener("keydown", event => {
+//     console.log(event);
+//     // keyCode: 13 = Enter
+// })
+// document.addEventListener("keydown", event => {
+//     if (event.keyCode == 13){
+//         console.log(`You pressed Enter ${}`);
+//     }
+// })
 
 
+const audio = new Audio('./clickSoundeffect.wav');
+const darken = document.getElementById("darken");
+const changeNamePrompt = document.getElementById("changeNamePrompt");
 const warningWindowForNoName = document.getElementById("warningWindowForNoName");
 // My buttons bellow / Prices upper way
 const inTotal = document.getElementById("inTotal");
@@ -160,24 +172,66 @@ setInterval(() => {
 
 mainCookieClicker.onclick = cookiesMadePerSecond;
 
-// bakeryName.addEventListener("click", () => {
-//     // changeName = window.prompt("How do you want to name your Maiden Army?");
-//     // if(changeName == ""){
-        
-//     //     warningWindowForNoName.style.display = "block";
-//     //     const randomDefaultNameGenerator = Math.floor(Math.random() * defaultBakeryNames.length);
-//     //     bakeryName.textContent = `${defaultBakeryNames[randomDefaultNameGenerator]}${defaultEndBakeryName}`;
-//     // }
-//     // else if(changeName === null){
-//     //     return bakeryName;
-//     // }
-//     // else{
-//     //     bakeryName.textContent = `${changeName}${defaultEndBakeryName}`;
-//     // }
+bakeryName.addEventListener("click", () => {
+    audio.play();
+    document.getElementById("changeNamePrompt").style.display = "block";
+    document.getElementById("darken").style.display = "block";
+    const bakeryNameChange = document.getElementById("bakeryNameChange");
+    bakeryNameChange.focus();
+    bakeryNameChange.select();
+    bakeryNameChange.addEventListener("keydown", event => {
+        if(event.keyCode == 13){
+            const result = bakeryNameChange.value;
+            darken.style.display = "none";
+            changeNamePrompt.style.display = "none";
+            bakeryName.textContent = result + "'s bakery";
+            audio.play();
+        }
+    })
+    darken.addEventListener("click", () => {
+        darken.style.display = "none";
+        changeNamePrompt.style.display = "none";
+    })
+    const closeChangeBakeryNameWindow = document.getElementById("closeChangeBakeryNameWindow");
+    closeChangeBakeryNameWindow.addEventListener("click", () => {
+        darken.style.display = "none";
+        changeNamePrompt.style.display = "none";
+        audio.play();
+    })
+})
+
+document.getElementById("confirmNameChange").addEventListener("click", () => {
+const bakeryNameChange = document.getElementById("bakeryNameChange").value;
+// Parse the name to localstorage or cookie or even db
+const result = bakeryNameChange;
+if(result){
+    darken.style.display = "none";
+    changeNamePrompt.style.display = "none";
+    bakeryName.textContent = result + "'s bakery";
+    audio.play();
+}
+})
+
+
+
+document.getElementById("randomNameChange").addEventListener("click", () => {
+    const randomNameGenerator = Math.floor(Math.random() * defaultBakeryNames.length);
+    const randomName = defaultBakeryNames[randomNameGenerator];
+    bakeryNameChange.value = randomName;
+    bakeryNameChange.focus();
+    audio.play();
+    
+})
+
+document.getElementById("cancelNameChange").addEventListener("click", () => {
+    darken.style.display = "none";
+    changeNamePrompt.style.display = "none";
+    audio.play();
+})
+
+// document.addEventListener("keydown", event => {
+//     console.log(`You pressed: ${event.key}`;)
 // })
-
-
-
 
 window.addEventListener("load", () => {
     const randomNameGenerator = Math.floor(Math.random() * defaultBakeryNames.length);
@@ -199,10 +253,6 @@ window.addEventListener("load", () => {
 function cookiesMadePerSecond() {
     let cookiesMade = Number(localStorage.getItem('cookiesMade')) || 0;
     let count = Number(localStorage.getItem('count')) || 0;
-
-    if (cookiesMade == 1) {
-        cookieCounter.textContent = `${cookiesMade} Maiden`;
-    }
 
     cookiesMade++;
     count++;

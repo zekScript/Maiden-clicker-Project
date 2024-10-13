@@ -47,11 +47,6 @@ const inTotal = document.getElementById("inTotal");
 
 
 
-
-
-
-
-
 const times1Btn = document.getElementById("times1Btn");
 const times10Btn = document.getElementById("times10Btn");
 const times100Btn = document.getElementById("times100Btn");

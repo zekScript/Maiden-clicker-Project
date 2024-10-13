@@ -14,6 +14,17 @@ body{
      
 }
 
+#darken{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100000000;
+  display: none;
+}
+
 button{
     cursor: pointer;
 }
@@ -150,9 +161,6 @@ button{
 }
 
 
-
-
-
 .top-buttons {
     width: 120px;
     font-size: 24px;
@@ -166,6 +174,8 @@ button{
     z-index: 0;
     text-shadow: 0px 1px 0px #444, 0px 0px 4px #000;
 }
+
+
 
 .top-buttons:before {
     content: '';
@@ -338,6 +348,49 @@ h3{
     left: 430px;
     bottom: 0px;
     right: 320px;
+}
+
+
+#closePromptOfBakeName{
+  font-size: 1.1em;
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  float: right;
+}
+
+#bakeryNameChange{
+  width: 65%;
+  position: relative;
+  left: 52px;
+  margin-bottom: 23px;
+}
+
+.change-name-prompt{
+  display: none;
+}
+
+.inner-Prompt{
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 250px;
+  background-color: #1a1a1a;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.inner-Prompt-btns{
+  display: flex; 
+  justify-content: center; 
+  gap: 5px;
+}
+
+.inner-Prompt-btns > button{
+  background-color: hsl(0, 0%, 20%);
+  color: white;
 }
 
 .move-button{
