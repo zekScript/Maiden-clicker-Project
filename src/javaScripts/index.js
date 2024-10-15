@@ -60,7 +60,6 @@ const runStartAgo = document.getElementById("runStartAgo");
 const goldenMaidenClicks = document.getElementById("goldenMaidenClicks");
 const maidensPerClick = document.getElementById("maidensPerClick");
 let maidenHireClicks = document.getElementById("maidenHireClicks");
-const defaultEndBakeryName = "'s maiden army";
 // LET DECLARATIONS
 let bakeryName = document.getElementById("bakeryName");
 let cookiesMade = parseInt(localStorage.getItem('cookiesMade')) || 0; // IT SHOULD BE ZERO BY DEFAULT BUT FOR TEST I CAN MODIFY IT!
@@ -235,7 +234,7 @@ document.getElementById("cancelNameChange").addEventListener("click", () => {
 
 window.addEventListener("load", () => {
     const randomNameGenerator = Math.floor(Math.random() * defaultBakeryNames.length);
-    bakeryName.textContent = `${defaultBakeryNames[randomNameGenerator]}${defaultEndBakeryName}`;
+    bakeryName.textContent = `${defaultBakeryNames[randomNameGenerator]}` + "'s Bakery";
     cookiesMade = localStorage.getItem("cookiesMade");
     cookiesMade = Number(cookiesMade); 
     cookieCounterMain.innerText = `maidens: ${cookiesMade}`;

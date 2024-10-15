@@ -10,8 +10,7 @@ html{
 }
 
 body{
-    margin: 0;
-     
+  margin: 0;
 }
 
 #darken{
@@ -229,6 +228,9 @@ button{
 .color-text{
     color: hsl(0, 0%, 45%);
     margin-bottom: 3.5px;
+    font-size: 12px;
+    border-bottom: 0.5px solid hsla(0, 0%, 78%, 0.3); 
+    padding-left: 20px;
 }
 
 #bakeryName {

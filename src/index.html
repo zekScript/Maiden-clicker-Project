@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
+    <link href="./styles/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -81,7 +81,6 @@
         <!-- WHEN BOUGHT BUILDINGS || CLICKED ON OPTIONS || UPDATE NOTES || INFO || LEGACY MAKE A DISPLAY HERE-->
         <div class="center-container">
             <section>
-<!--  Change display: none to display: block to see it perma      -->
             <div id="optionsWindow" style="background-color: #1a1a1a; display: none">
                 <button id="closeOutOfWindowOption" style="background: transparent;  color: #fff; border: none; float:right;"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
                     <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
@@ -93,7 +92,7 @@
                     </div>
                     <p style="padding-top: 25px; border-top: 0.5px solid hsla(0, 0%, 50%, 0.2); border-bottom: 0.5px solid hsla(0, 0%, 78%, 0.3); width: 150px; padding-left: 15px;">General</p>
                     <div class="languageStyle">
-                    <p>Language:<span id="LanguageSelected"> English</span></p><button class="other-options" id="languageSelection">Change language</button>
+                    <p>Language:<span id="LanguageSelected">English</span></p><button class="other-options" id="languageSelection">Change language</button>
                     </div>
                     <div class="saveStyle">
                     <button class="other-options" style="text-align: end; width: 150px; height: 25px;">Save</button><p class="color-text">Save manually (The game saves automatically every 60 seconds, shortcut: ctrl + s)</p>
@@ -112,29 +111,27 @@
                 </div>
                 <div class="settingsWindow">
                     <p style="padding-top: 25px; border-top: 0.5px solid hsla(0, 0%, 78%, 0.3); border-bottom: 0.5px solid hsla(0, 0%, 78%, 0.3); width: 150px; padding-left: 15px;">Settings</p>
-                    <!-- <div class="volumeContainer">
-
-                    </div> -->
+                    <!-- Options Id -->
                     <div style="display: flex; padding-top: 10px">
-                        <button class="options">Fancy graphics: on</button><p class="color-text" style="font-size: 12px; border-bottom: 0.5px solid hsla(0, 0%, 78%, 0.3); padding-left: 20px;">(Visual improvments; disabling may improve performance)</p>
+                        <button id="fancyGrapichsOption" class="options">Fancy graphics: on</button><p class="color-text">(Visual improvments; disabling may improve performance)</p>
                     </div>
                     <div style="display: flex; padding-top: 10px">
-                        <button class="options">CSS Filters: on</button><p class="color-text" style="font-size: 11px; border-bottom: 0.5px solid hsla(0, 0%, 78%, 0.3); padding-left: 20px;">(Cutting edge visual improvments; disabling may improve performance)</p>
+                        <button id="cssFiltersOption" class="options">CSS Filters: on</button><p class="color-text">(Cutting edge visual improvments; disabling may improve performance)</p>
                     </div>
                     <div style="display: flex; padding-top: 10px">
-                        <button class="options">Particles: on</button><p class="color-text" style="font-size: 12px; border-bottom: 0.5px solid hsla(0, 0%, 78%, 0.3); padding-left: 20px;">(Maidens falling down, etc.; disabling may improve performance)</p>
+                        <button id="particlesOption" class="options">Particles: on</button><p class="color-text">(Maidens falling down, etc.; disabling may improve performance)</p>
                     </div>
                     <div style="display: flex; padding-top: 10px">
-                        <button class="options">Numbers: on</button><p class="color-text" style="font-size: 12px; border-bottom: 0.5px solid hsla(0, 0%, 78%, 0.3); padding-left: 20px;">(numbers that pop-up when clicking the maiden)</p>
+                        <button id="numbersOption" class="options">Numbers: on</button><p class="color-text">(numbers that pop-up when clicking the maiden)</p>
                     </div>
                     <div style="display: flex; padding-top: 10px">
-                        <button class="options">wobbly maiden: on</button><p class="color-text" style="font-size: 12px; border-bottom: 0.5px solid hsla(0, 0%, 78%, 0.3); padding-left: 20px;">(your maiden will react when you click it)</p>
+                        <button id="wobblyMaidenOption" class="options">wobbly maiden: on</button><p class="color-text" >(your maiden will react when you click it)</p>
                     </div>
                     <div style="display: flex; padding-top: 10px">
-                        <button class="options">maiden sound: on</button><p class="color-text" style="font-size: 12px; border-bottom: 0.5px solid hsla(0, 0%, 78%, 0.3); padding-left: 20px;">(maiden sound when you click it)</p>
+                        <button id="maidenSoundOption" class="options">maiden sound: on</button><p class="color-text">(maiden sound when you click it)</p>
                     </div>
                     <div style="display: flex; padding-top: 10px">
-                        <button class="options">short numbers: on</button><p class="color-text" style="font-size: 12px; border-bottom: 0.5px solid hsla(0, 0%, 78%, 0.3); padding-left: 20px;">(shorten big numbers)</p>
+                        <button id="shortNumbersOption" class="options">short numbers: on</button><p class="color-text">(shorten big numbers)</p>
                     </div>
                     <div style="height:230px"></div>
 
@@ -217,7 +214,6 @@
     <section>
     <div class="align-buildings-right">
         <div class="stats-container">
-            <!-- DONT DELETE ID'S -->
     <h1>Stats:</h1>
     <p id="maidensMade">Maidens Bank: 0</p>
     <p id="maidensHiredThisAscension">maidens made (this ascension): 0</p>
@@ -228,11 +224,14 @@
     <p id="maidensPerClick">Maidens clicked: 0</p>
     <p id="maidenHireClicks">Maidens buildings owned: 0</p>
     <p>Version 1.0.1</p>
+    <button id="signIn" type="submit">Sign in</button>
+    <button id="signOut" type="submit">Sign out</button>
     </div>
     </div>
     </div>
+    
     </section>
     </section>
-    <script type="module" src="index.js"></script>
+    <script type="module" src="./javaScripts/index.js"></script>
 </body>
 </html>
