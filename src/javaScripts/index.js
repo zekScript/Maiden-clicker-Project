@@ -133,6 +133,13 @@ const darkSoulsNews = [
     "News: The Dark Souls community organized fan conventions and meetups, providing opportunities for fans to connect with each other and share their passion for the series."
 ];
 
+// Registration Form Scripting Side
+
+
+
+
+
+
 // Legacy button Function
 
 legacyBtn.addEventListener("click", () => {
@@ -145,7 +152,6 @@ legacyBtn.addEventListener("click", () => {
         isLegacyBtn = false;
     }
 })
-
 cancelBtnLegacy.addEventListener("click", () => {
     mainLegacyWindow.style.display = "none";
 })

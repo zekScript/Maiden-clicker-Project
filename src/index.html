@@ -134,10 +134,36 @@
                         <button id="shortNumbersOption" class="options">short numbers: on</button><p class="color-text">(shorten big numbers)</p>
                     </div>
                     <div style="height:230px"></div>
-
-                    
                 </div>
             </section>
+            <!-- Registration form -->
+            <div class="registration-form-div">
+                <form id="registrationForm">
+                <p class="big-text margin-gap" style="text-align: center;">Registration</p>
+                <label class="big-text margin-gap">Username</label>
+                <input type="text" id="uniqueUsernameRegistration">
+                <label class="big-text margin-gap">Password</label>
+                <input  type="password" id="passwordRegister">
+                <label class="big-text margin-gap">Email</label>
+                <input type="email" id="emailRegister">
+                <a id="haveAnAccountAlready" class="have-an-account-already">Have an account? Log in!</a>
+                <button id="registerNow">Register</button>
+                </form>
+            </div>
+
+            <div class="logIn-form" style="display: none;">
+                <form id="logInForm">
+                <h1>Log in</h1>
+                <p>Please Log in down here</p>
+                <label>Username</label>
+                <input type="text" id="uniqueUsernameLogIn">
+                <label>Password</label>
+                <input type="text" id="passwordLogIn">
+                <button id="logInNow">Log in</button>
+                <a href="forgotPassword.html">Forgot password?</a>
+                </form>
+            </div>
+<!-- TYPE HERE FOR INNER CENTER WINDOW -->
             <div id="darken"></div>
             <!-- Prompts here -->
             <div id="changeNamePrompt" class="change-name-prompt">
@@ -224,12 +250,15 @@
     <p id="maidensPerClick">Maidens clicked: 0</p>
     <p id="maidenHireClicks">Maidens buildings owned: 0</p>
     <p>Version 1.0.1</p>
-    <button id="signIn" type="submit">Sign in</button>
-    <button id="signOut" type="submit">Sign out</button>
+
+    <div class="registration">
+        <button id="signIn" type="submit">Sign in</button>
+        <button id="signOut" type="submit">Sign out</button>
+    </div>
+
     </div>
     </div>
-    </div>
-    
+</div>
     </section>
     </section>
     <script type="module" src="./javaScripts/index.js"></script>
