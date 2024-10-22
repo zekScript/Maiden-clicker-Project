@@ -204,6 +204,14 @@ button{
   display: flex;
 }
 
+.registration-form-div input{
+  font-size: 1.3em;
+  font-weight: 500;
+  font-family: Arial, sans-serif;
+  border-radius: 6px;
+  border: none;
+}
+
 #registrationForm{
   width: 350px;
   height: 350px;
@@ -212,6 +220,32 @@ button{
   flex-direction: column;
   margin-left: 185px;
   margin-top: 50px;
+}
+
+.x-Btn{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 0px;
+}
+
+/* -webkit-user-select: none;     
+-moz-user-select: none; 
+-ms-user-select: none; 
+user-select: none;  */
+
+.register-logIn-Btns{
+  width: 100px;
+  background-color: hsl(0, 0%, 20%);
+  color: white;
+  font-size: 1em;
+  margin-top: 15px;
+}
+
+#registrationForm input:focus{
+  border: none;
+  padding: 0px;
+  margin: 0px;
 }
 
 .big-text{
@@ -224,6 +258,33 @@ button{
   margin-bottom: 5px;
 }
 
+/* Log in form */
+
+#logInForm{
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 185px;
+  margin-top: 50px;
+}
+
+.log-in-form-div input{
+    font-size: 16px;
+
+}
+
+#emailLogIn, #passwordLogIn, #uniqueUsernameRegistration, #passwordRegister, #emailRegister{
+  height: 39px;
+  padding-left: 16px;
+  font-size: 1.2em; 
+  font-weight: 600;
+  font-family: Arial, sans-serif;
+  border-radius: 6px;
+  border: none;
+}
+
 .have-an-account-already{
   display: flex;
   justify-content: flex-end;
@@ -233,13 +294,6 @@ button{
 
 }
 
-#registerNow{
-  width: 100px;
-  background-color: hsl(0, 0%, 20%);
-  color: white;
-  font-size: 1em;
-  margin-top: 15px;
-}
 
 .have-an-account-already:hover{
   color: hsl(0, 0%, 48%);
@@ -249,12 +303,7 @@ button{
   color: hsl(0, 0%, 40%);
 }
 
-.registration-form-div input{
-  height: 100px;
-  font-size: 1.4em;
-  font-weight: 500;
-  font-family: Arial, sans-serif;
-}
+
 
 .top-buttons {
     width: 120px;

@@ -137,32 +137,35 @@
                 </div>
             </section>
             <!-- Registration form -->
-            <div class="registration-form-div">
+            <div id="registrationFormPrompt" class="registration-form-div" style="display: none;">
                 <form id="registrationForm">
                 <p class="big-text margin-gap" style="text-align: center;">Registration</p>
                 <label class="big-text margin-gap">Username</label>
                 <input type="text" id="uniqueUsernameRegistration">
                 <label class="big-text margin-gap">Password</label>
-                <input  type="password" id="passwordRegister">
+                <input type="password" id="passwordRegister">
                 <label class="big-text margin-gap">Email</label>
                 <input type="email" id="emailRegister">
                 <a id="haveAnAccountAlready" class="have-an-account-already">Have an account? Log in!</a>
-                <button id="registerNow">Register</button>
+                <button class="register-logIn-Btns" id="registerNow">Register</button>
                 </form>
             </div>
 
-            <div class="logIn-form" style="display: none;">
+            <!-- Log in form -->
+             
+            <div id="logInFormPrompt" class="registration-form-div log-in-form-div" style="display: flex;">
+                <!-- <div class="x-Btn" style="z-index: 1000000;">X</div> -->
                 <form id="logInForm">
-                <h1>Log in</h1>
-                <p>Please Log in down here</p>
-                <label>Username</label>
-                <input type="text" id="uniqueUsernameLogIn">
-                <label>Password</label>
-                <input type="text" id="passwordLogIn">
-                <button id="logInNow">Log in</button>
-                <a href="forgotPassword.html">Forgot password?</a>
+                <p class="big-text margin-gap" style="text-align: center;">Log in</p>
+                <label class="big-text margin-gap">Email</label>
+                <input type="email" id="emailLogIn">
+                <label class="big-text margin-gap">Password</label>
+                <input  type="password" id="passwordLogIn">
+                <a id="dontHaveAnAccountAlready" class="have-an-account-already">Don't have an account? Register!</a>
+                <button class="register-logIn-Btns" id="logInNow">Log In</button>
                 </form>
             </div>
+
 <!-- TYPE HERE FOR INNER CENTER WINDOW -->
             <div id="darken"></div>
             <!-- Prompts here -->

@@ -24,7 +24,7 @@ Todo list:
 // })
 
 
-const audio = new Audio('./clickSoundeffect.wav');
+
 const darken = document.getElementById("darken");
 const changeNamePrompt = document.getElementById("changeNamePrompt");
 const warningWindowForNoName = document.getElementById("warningWindowForNoName");
@@ -76,7 +76,7 @@ let isPressedBtn = false;
 let isLegacyBtn = false;
 let isPressedBtnOptions = false;
 
-
+const audio = new Audio('/Sound effects/clickSoundeffect.wav');
 
 
 //Defaullt bakery names
@@ -135,8 +135,17 @@ const darkSoulsNews = [
 
 // Registration Form Scripting Side
 
+const registrationFormPrompt = document.getElementById("registrationFormPrompt");
+const haveAnAccountAlready = document.getElementById("haveAnAccountAlready");
+const registerNow = document.getElementById("registerNow");
 
-
+registerNow.addEventListener("click", () => {
+    const uniqueUsernameRegistration = document.getElementById("uniqueUsernameRegistration").value;
+    const passwordRegister = document.getElementById("passwordRegister").value;
+    const emailRegister = document.getElementById("emailRegister").value;
+    
+    console.log("Registered");
+})
 
 
 

@@ -8,3 +8,5 @@ make log in and log out function work
 Make settings work (Maybe with server)
 Goodluck
 */
+
+
