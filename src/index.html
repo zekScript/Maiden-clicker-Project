@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/funny" rel="stylesheet">
+    
     <title>Maiden Clicker</title>
 </head>
 <body>
@@ -137,33 +139,43 @@
                 </div>
             </section>
             <!-- Registration form -->
-            <div id="registrationFormPrompt" class="registration-form-div" style="display: none;">
-                <form id="registrationForm">
+            <div id="registrationFormPrompt" class="registration-form-div" style="display: flex;">
+                <div style="display: flex; justify-content: flex-end;">
+                    <div class="x-Btn" onclick="closeTab()">x</div>
+                </div>
+                <form>
+            <div class="log-in-register-form ">
                 <p class="big-text margin-gap" style="text-align: center;">Registration</p>
-                <label class="big-text margin-gap">Username</label>
-                <input type="text" id="uniqueUsernameRegistration">
-                <label class="big-text margin-gap">Password</label>
-                <input type="password" id="passwordRegister">
-                <label class="big-text margin-gap">Email</label>
-                <input type="email" id="emailRegister">
-                <a id="haveAnAccountAlready" class="have-an-account-already">Have an account? Log in!</a>
+                <label class="big-text ">Username</label><br>
+                <input type="text" id="uniqueUsernameRegistration"><br>
+                <label class="big-text ">Password</label><br>
+                <input type="password" id="passwordRegister"><br>
+                <label class="big-text ">Email</label><br>
+                <input type="email" id="emailRegister"><br>
+                <div id="haveAnAccountAlready" class="have-an-account-already">Have an account? Log in!</div>
                 <button class="register-logIn-Btns" id="registerNow">Register</button>
+            </div>
                 </form>
             </div>
 
             <!-- Log in form -->
              
-            <div id="logInFormPrompt" class="registration-form-div log-in-form-div" style="display: flex;">
-                <!-- <div class="x-Btn" style="z-index: 1000000;">X</div> -->
-                <form id="logInForm">
+            <div id="logInFormPrompt" class="registration-form-div log-in-form-div" style="display: none;">
+        <div style="display: flex; justify-content: flex-end;">
+            <div class="x-Btn" onclick="closeTab()">x</div>
+        </div>
+            <form>
+                <div class="log-in-register-form">
                 <p class="big-text margin-gap" style="text-align: center;">Log in</p>
-                <label class="big-text margin-gap">Email</label>
-                <input type="email" id="emailLogIn">
-                <label class="big-text margin-gap">Password</label>
-                <input  type="password" id="passwordLogIn">
-                <a id="dontHaveAnAccountAlready" class="have-an-account-already">Don't have an account? Register!</a>
+                <label class="big-text margin-gap">Email</label><br>
+                <input type="email" id="emailLogIn"><br>
+                <label class="big-text margin-gap">Password</label><br>
+                <input  type="password" id="passwordLogIn"><br>
+                <div id="dontHaveAnAccountAlready" class="have-an-account-already">Don't have an account? Register!</div>
                 <button class="register-logIn-Btns" id="logInNow">Log In</button>
-                </form>
+                </div>
+            </form>
+            </div>
             </div>
 
 <!-- TYPE HERE FOR INNER CENTER WINDOW -->
@@ -264,6 +276,6 @@
 </div>
     </section>
     </section>
-    <script type="module" src="./javaScripts/index.js"></script>
+    <script src="./javaScripts/index.js"></script>
 </body>
 </html>

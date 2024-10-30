@@ -169,7 +169,11 @@ closeLegacyWindow.addEventListener("click", () => {
     mainLegacyWindow.style.display = "none";
 })
 
+const logInFormPrompt = document.getElementById("logInFormPrompt");
 
+function closeTab(){
+    
+}
 
 // random news generator
 

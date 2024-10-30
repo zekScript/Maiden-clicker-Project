@@ -7,6 +7,7 @@ html{
     overflow: hidden;
     background-image: url("https://repository-images.githubusercontent.com/534702119/ee3b5f1b-3f01-439e-a558-68ed5aabce41");
     color: white;
+    height: 100vh;
 }
 
 body{
@@ -194,14 +195,52 @@ button{
   margin-top: 50px;
 }
 
+.log-in-register-form{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.x-Btn{
+  -webkit-user-select: none;     
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none; 
+  font-family: cursive;
+  font-style: normal;
+  text-shadow: 0px 1px 0px #444, 0px 0px 4px #000;
+  font-size: 23px;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  text-align: end;
+  padding-right: 8px;
+  border-bottom-left-radius: 100%;
+  border-top: none;
+  border-right: none;
+  cursor: pointer;
+  box-shadow: -2px 2px 8px #000, 2px -2px 8px rgba(255,255,255,0.1) inset;
+  color: hsl(0, 0%, 65%);
+}
+
+.x-Btn:hover{
+  color: hsl(0, 0%, 70%);
+  box-shadow: -2px 2px 8px #000, 2px -2px 8px rgba(255,255,255,0.09) inset;
+}
+
 .registration-form-div{
   background-color: #1a1a1a;
   color: white;
   width: 100%;
   height: 100%;
-  margin: 0px;
-  padding: 0px;
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  
 }
 
 .registration-form-div input{
@@ -222,24 +261,14 @@ button{
   margin-top: 50px;
 }
 
-.x-Btn{
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-  height: 0px;
-}
 
-/* -webkit-user-select: none;     
--moz-user-select: none; 
--ms-user-select: none; 
-user-select: none;  */
 
 .register-logIn-Btns{
   width: 100px;
   background-color: hsl(0, 0%, 20%);
   color: white;
   font-size: 1em;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 #registrationForm input:focus{
@@ -255,7 +284,7 @@ user-select: none;  */
 
 .margin-gap{
   margin-top: 20px;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 }
 
 /* Log in form */
@@ -272,7 +301,6 @@ user-select: none;  */
 
 .log-in-form-div input{
     font-size: 16px;
-
 }
 
 #emailLogIn, #passwordLogIn, #uniqueUsernameRegistration, #passwordRegister, #emailRegister{
@@ -289,7 +317,7 @@ user-select: none;  */
   display: flex;
   justify-content: flex-end;
   color: hsl(0, 0%, 40%);
-  margin-top: 8px;
+  margin-top: 1px;
   cursor: pointer;
 
 }
